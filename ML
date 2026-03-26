@@ -2,19 +2,39 @@
  "cells": [
   {
    "cell_type": "markdown",
-   "id": "7282292b",
+   "id": "6e675403",
    "metadata": {
     "papermill": {
-     "duration": 0.006459,
-     "end_time": "2026-03-26T14:04:07.992914+00:00",
+     "duration": 0.006555,
+     "end_time": "2026-03-26T16:08:12.150209+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:04:07.986455+00:00",
+     "start_time": "2026-03-26T16:08:12.143654+00:00",
      "status": "completed"
     },
     "tags": []
    },
    "source": [
     "# Credit Card Fraud Detection — Machine Learning\n",
+    "\n",
+    "## Credit Card Fraud Detection — Machine Learning Modeling\n",
+    "\n",
+    "Following the exploratory data analysis conducted in Project 1, this project focuses on building and evaluating machine learning models to detect fraudulent transactions.\n",
+    "\n",
+    "The EDA revealed that fraud is strongly associated with:\n",
+    "- Transaction amount\n",
+    "- Night-time activity\n",
+    "- Certain merchant categories\n",
+    "\n",
+    "This project aims to:\n",
+    "- Train multiple models\n",
+    "- Handle class imbalance\n",
+    "- Evaluate performance using appropriate metrics\n",
+    "- Identify the most effective fraud detection model\n",
+    "\n",
+    "The models explored include:\n",
+    "- Logistic Regression (baseline)\n",
+    "- Random Forest (ensemble)\n",
+    "- XGBoost (advanced boosting model)\n",
     "\n",
     "# Overview\n",
     "\n",
@@ -59,19 +79,19 @@
   {
    "cell_type": "code",
    "execution_count": 1,
-   "id": "219de120",
+   "id": "1cda0b62",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T14:04:08.009466Z",
-     "iopub.status.busy": "2026-03-26T14:04:08.008323Z",
-     "iopub.status.idle": "2026-03-26T14:04:13.786377Z",
-     "shell.execute_reply": "2026-03-26T14:04:13.785279Z"
+     "iopub.execute_input": "2026-03-26T16:08:12.165093Z",
+     "iopub.status.busy": "2026-03-26T16:08:12.164782Z",
+     "iopub.status.idle": "2026-03-26T16:08:17.710660Z",
+     "shell.execute_reply": "2026-03-26T16:08:17.709517Z"
     },
     "papermill": {
-     "duration": 5.790785,
-     "end_time": "2026-03-26T14:04:13.788962+00:00",
+     "duration": 5.555033,
+     "end_time": "2026-03-26T16:08:17.713014+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:04:07.998177+00:00",
+     "start_time": "2026-03-26T16:08:12.157981+00:00",
      "status": "completed"
     },
     "tags": []
@@ -104,13 +124,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "39c7c5ba",
+   "id": "567f881b",
    "metadata": {
     "papermill": {
-     "duration": 0.006172,
-     "end_time": "2026-03-26T14:04:13.801000+00:00",
+     "duration": 0.005335,
+     "end_time": "2026-03-26T16:08:17.724078+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:04:13.794828+00:00",
+     "start_time": "2026-03-26T16:08:17.718743+00:00",
      "status": "completed"
     },
     "tags": []
@@ -124,19 +144,19 @@
   {
    "cell_type": "code",
    "execution_count": 2,
-   "id": "633fe620",
+   "id": "e97e3ec4",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T14:04:13.815178Z",
-     "iopub.status.busy": "2026-03-26T14:04:13.814336Z",
-     "iopub.status.idle": "2026-03-26T14:04:27.057576Z",
-     "shell.execute_reply": "2026-03-26T14:04:27.056318Z"
+     "iopub.execute_input": "2026-03-26T16:08:17.736896Z",
+     "iopub.status.busy": "2026-03-26T16:08:17.736416Z",
+     "iopub.status.idle": "2026-03-26T16:08:32.499515Z",
+     "shell.execute_reply": "2026-03-26T16:08:32.498444Z"
     },
     "papermill": {
-     "duration": 13.253849,
-     "end_time": "2026-03-26T14:04:27.060188+00:00",
+     "duration": 14.772356,
+     "end_time": "2026-03-26T16:08:32.501721+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:04:13.806339+00:00",
+     "start_time": "2026-03-26T16:08:17.729365+00:00",
      "status": "completed"
     },
     "tags": []
@@ -372,19 +392,19 @@
   {
    "cell_type": "code",
    "execution_count": 3,
-   "id": "ac576f7a",
+   "id": "5da528af",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T14:04:27.074752Z",
-     "iopub.status.busy": "2026-03-26T14:04:27.074113Z",
-     "iopub.status.idle": "2026-03-26T14:04:27.081553Z",
-     "shell.execute_reply": "2026-03-26T14:04:27.080148Z"
+     "iopub.execute_input": "2026-03-26T16:08:32.516907Z",
+     "iopub.status.busy": "2026-03-26T16:08:32.515888Z",
+     "iopub.status.idle": "2026-03-26T16:08:32.523771Z",
+     "shell.execute_reply": "2026-03-26T16:08:32.522043Z"
     },
     "papermill": {
-     "duration": 0.0175,
-     "end_time": "2026-03-26T14:04:27.083683+00:00",
+     "duration": 0.017288,
+     "end_time": "2026-03-26T16:08:32.525716+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:04:27.066183+00:00",
+     "start_time": "2026-03-26T16:08:32.508428+00:00",
      "status": "completed"
     },
     "tags": []
@@ -409,19 +429,19 @@
   {
    "cell_type": "code",
    "execution_count": 4,
-   "id": "55fb7f5f",
+   "id": "846769b8",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T14:04:27.098982Z",
-     "iopub.status.busy": "2026-03-26T14:04:27.098166Z",
-     "iopub.status.idle": "2026-03-26T14:04:28.405320Z",
-     "shell.execute_reply": "2026-03-26T14:04:28.403774Z"
+     "iopub.execute_input": "2026-03-26T16:08:32.540583Z",
+     "iopub.status.busy": "2026-03-26T16:08:32.539144Z",
+     "iopub.status.idle": "2026-03-26T16:08:33.768656Z",
+     "shell.execute_reply": "2026-03-26T16:08:33.767572Z"
     },
     "papermill": {
-     "duration": 1.317574,
-     "end_time": "2026-03-26T14:04:28.407934+00:00",
+     "duration": 1.239392,
+     "end_time": "2026-03-26T16:08:33.770981+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:04:27.090360+00:00",
+     "start_time": "2026-03-26T16:08:32.531589+00:00",
      "status": "completed"
     },
     "tags": []
@@ -453,13 +473,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "52fc6890",
+   "id": "b5d707e3",
    "metadata": {
     "papermill": {
-     "duration": 0.008339,
-     "end_time": "2026-03-26T14:04:28.422114+00:00",
+     "duration": 0.006208,
+     "end_time": "2026-03-26T16:08:33.784076+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:04:28.413775+00:00",
+     "start_time": "2026-03-26T16:08:33.777868+00:00",
      "status": "completed"
     },
     "tags": []
@@ -478,19 +498,19 @@
   {
    "cell_type": "code",
    "execution_count": 5,
-   "id": "5887299c",
+   "id": "63061632",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T14:04:28.436703Z",
-     "iopub.status.busy": "2026-03-26T14:04:28.436066Z",
-     "iopub.status.idle": "2026-03-26T14:04:28.484000Z",
-     "shell.execute_reply": "2026-03-26T14:04:28.483043Z"
+     "iopub.execute_input": "2026-03-26T16:08:33.797763Z",
+     "iopub.status.busy": "2026-03-26T16:08:33.797229Z",
+     "iopub.status.idle": "2026-03-26T16:08:33.838071Z",
+     "shell.execute_reply": "2026-03-26T16:08:33.836997Z"
     },
     "papermill": {
-     "duration": 0.058301,
-     "end_time": "2026-03-26T14:04:28.486493+00:00",
+     "duration": 0.050291,
+     "end_time": "2026-03-26T16:08:33.840292+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:04:28.428192+00:00",
+     "start_time": "2026-03-26T16:08:33.790001+00:00",
      "status": "completed"
     },
     "tags": []
@@ -512,13 +532,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "3987bb11",
+   "id": "1acd2f94",
    "metadata": {
     "papermill": {
-     "duration": 0.005822,
-     "end_time": "2026-03-26T14:04:28.498222+00:00",
+     "duration": 0.006094,
+     "end_time": "2026-03-26T16:08:33.852487+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:04:28.492400+00:00",
+     "start_time": "2026-03-26T16:08:33.846393+00:00",
      "status": "completed"
     },
     "tags": []
@@ -531,19 +551,19 @@
   {
    "cell_type": "code",
    "execution_count": 6,
-   "id": "d49031bc",
+   "id": "ee1553ef",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T14:04:28.512238Z",
-     "iopub.status.busy": "2026-03-26T14:04:28.511776Z",
-     "iopub.status.idle": "2026-03-26T14:04:29.543177Z",
-     "shell.execute_reply": "2026-03-26T14:04:29.542013Z"
+     "iopub.execute_input": "2026-03-26T16:08:33.865745Z",
+     "iopub.status.busy": "2026-03-26T16:08:33.865277Z",
+     "iopub.status.idle": "2026-03-26T16:08:34.710305Z",
+     "shell.execute_reply": "2026-03-26T16:08:34.708965Z"
     },
     "papermill": {
-     "duration": 1.04202,
-     "end_time": "2026-03-26T14:04:29.545903+00:00",
+     "duration": 0.854389,
+     "end_time": "2026-03-26T16:08:34.712574+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:04:28.503883+00:00",
+     "start_time": "2026-03-26T16:08:33.858185+00:00",
      "status": "completed"
     },
     "tags": []
@@ -557,13 +577,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "2c45cfdc",
+   "id": "36aef990",
    "metadata": {
     "papermill": {
-     "duration": 0.006432,
-     "end_time": "2026-03-26T14:04:29.558250+00:00",
+     "duration": 0.005663,
+     "end_time": "2026-03-26T16:08:34.723890+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:04:29.551818+00:00",
+     "start_time": "2026-03-26T16:08:34.718227+00:00",
      "status": "completed"
     },
     "tags": []
@@ -576,19 +596,19 @@
   {
    "cell_type": "code",
    "execution_count": 7,
-   "id": "dbb7d0bf",
+   "id": "f3ebfff1",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T14:04:29.572741Z",
-     "iopub.status.busy": "2026-03-26T14:04:29.571724Z",
-     "iopub.status.idle": "2026-03-26T14:04:29.779746Z",
-     "shell.execute_reply": "2026-03-26T14:04:29.778350Z"
+     "iopub.execute_input": "2026-03-26T16:08:34.737014Z",
+     "iopub.status.busy": "2026-03-26T16:08:34.736708Z",
+     "iopub.status.idle": "2026-03-26T16:08:34.879854Z",
+     "shell.execute_reply": "2026-03-26T16:08:34.878433Z"
     },
     "papermill": {
-     "duration": 0.218328,
-     "end_time": "2026-03-26T14:04:29.782417+00:00",
+     "duration": 0.153078,
+     "end_time": "2026-03-26T16:08:34.882653+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:04:29.564089+00:00",
+     "start_time": "2026-03-26T16:08:34.729575+00:00",
      "status": "completed"
     },
     "tags": []
@@ -603,13 +623,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "2f601197",
+   "id": "8ba5cf56",
    "metadata": {
     "papermill": {
-     "duration": 0.005883,
-     "end_time": "2026-03-26T14:04:29.794306+00:00",
+     "duration": 0.005427,
+     "end_time": "2026-03-26T16:08:34.893891+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:04:29.788423+00:00",
+     "start_time": "2026-03-26T16:08:34.888464+00:00",
      "status": "completed"
     },
     "tags": []
@@ -619,25 +639,33 @@
     "\n",
     "# Handling Class Imbalance using SMOTE\n",
     "\n",
-    "SMOTE generates synthetic fraud samples to balance the dataset."
+    "Fraud detection datasets are highly imbalanced, with fraudulent transactions representing a very small percentage of the data.\n",
+    "\n",
+    "This imbalance can cause models to:\n",
+    "- Predict mostly non-fraud cases\n",
+    "- Achieve high accuracy but poor fraud detection\n",
+    "\n",
+    "To address this, SMOTE (Synthetic Minority Oversampling Technique) is applied.\n",
+    "\n",
+    "SMOTE works by generating synthetic samples of the minority class (fraud), allowing the model to better learn fraud patterns."
    ]
   },
   {
    "cell_type": "code",
    "execution_count": 8,
-   "id": "6dc0cc99",
+   "id": "3f41a7f4",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T14:04:29.808525Z",
-     "iopub.status.busy": "2026-03-26T14:04:29.807991Z",
-     "iopub.status.idle": "2026-03-26T14:04:30.322321Z",
-     "shell.execute_reply": "2026-03-26T14:04:30.320942Z"
+     "iopub.execute_input": "2026-03-26T16:08:34.907830Z",
+     "iopub.status.busy": "2026-03-26T16:08:34.906603Z",
+     "iopub.status.idle": "2026-03-26T16:08:35.297084Z",
+     "shell.execute_reply": "2026-03-26T16:08:35.295867Z"
     },
     "papermill": {
-     "duration": 0.524676,
-     "end_time": "2026-03-26T14:04:30.324825+00:00",
+     "duration": 0.400278,
+     "end_time": "2026-03-26T16:08:35.299789+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:04:29.800149+00:00",
+     "start_time": "2026-03-26T16:08:34.899511+00:00",
      "status": "completed"
     },
     "tags": []
@@ -671,13 +699,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "0a1dc153",
+   "id": "ace9a594",
    "metadata": {
     "papermill": {
-     "duration": 0.006346,
-     "end_time": "2026-03-26T14:04:30.337149+00:00",
+     "duration": 0.005563,
+     "end_time": "2026-03-26T16:08:35.311335+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:04:30.330803+00:00",
+     "start_time": "2026-03-26T16:08:35.305772+00:00",
      "status": "completed"
     },
     "tags": []
@@ -693,18 +721,18 @@
     "- Both classes were equally represented\n",
     "- This enables the model to better learn fraud patterns\n",
     "\n",
-    "Importantly, SMOTE was applied only to the training set to prevent data leakage."
+    "Importantly, SMOTE was applied only to the training set to prevent data leakage. Balancing the dataset improves the model’s ability to detect fraud (recall), but may increase false positives, leading to lower precision."
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "29ea3a59",
+   "id": "f1087481",
    "metadata": {
     "papermill": {
-     "duration": 0.005735,
-     "end_time": "2026-03-26T14:04:30.348762+00:00",
+     "duration": 0.006477,
+     "end_time": "2026-03-26T16:08:35.323611+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:04:30.343027+00:00",
+     "start_time": "2026-03-26T16:08:35.317134+00:00",
      "status": "completed"
     },
     "tags": []
@@ -713,25 +741,25 @@
     "---\n",
     "# Model 1: Logistic Regression\n",
     "\n",
-    "Baseline model for comparison."
+    "Logistic Regression serves as a baseline model to evaluate how well a simple linear model performs on fraud detection."
    ]
   },
   {
    "cell_type": "code",
    "execution_count": 9,
-   "id": "cc481cf7",
+   "id": "5d6d9164",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T14:04:30.362544Z",
-     "iopub.status.busy": "2026-03-26T14:04:30.361985Z",
-     "iopub.status.idle": "2026-03-26T14:04:33.140487Z",
-     "shell.execute_reply": "2026-03-26T14:04:33.139466Z"
+     "iopub.execute_input": "2026-03-26T16:08:35.337871Z",
+     "iopub.status.busy": "2026-03-26T16:08:35.336665Z",
+     "iopub.status.idle": "2026-03-26T16:08:37.823700Z",
+     "shell.execute_reply": "2026-03-26T16:08:37.822724Z"
     },
     "papermill": {
-     "duration": 2.789065,
-     "end_time": "2026-03-26T14:04:33.143496+00:00",
+     "duration": 2.497583,
+     "end_time": "2026-03-26T16:08:37.827131+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:04:30.354431+00:00",
+     "start_time": "2026-03-26T16:08:35.329548+00:00",
      "status": "completed"
     },
     "tags": []
@@ -748,13 +776,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "3773853a",
+   "id": "97132d8b",
    "metadata": {
     "papermill": {
-     "duration": 0.010473,
-     "end_time": "2026-03-26T14:04:33.164260+00:00",
+     "duration": 0.010167,
+     "end_time": "2026-03-26T16:08:37.847505+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:04:33.153787+00:00",
+     "start_time": "2026-03-26T16:08:37.837338+00:00",
      "status": "completed"
     },
     "tags": []
@@ -766,19 +794,19 @@
   {
    "cell_type": "code",
    "execution_count": 10,
-   "id": "6eb863d8",
+   "id": "bc3ab173",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T14:04:33.185597Z",
-     "iopub.status.busy": "2026-03-26T14:04:33.185142Z",
-     "iopub.status.idle": "2026-03-26T14:04:33.350771Z",
-     "shell.execute_reply": "2026-03-26T14:04:33.349359Z"
+     "iopub.execute_input": "2026-03-26T16:08:37.868920Z",
+     "iopub.status.busy": "2026-03-26T16:08:37.868533Z",
+     "iopub.status.idle": "2026-03-26T16:08:38.022507Z",
+     "shell.execute_reply": "2026-03-26T16:08:38.021275Z"
     },
     "papermill": {
-     "duration": 0.17909,
-     "end_time": "2026-03-26T14:04:33.352970+00:00",
+     "duration": 0.167646,
+     "end_time": "2026-03-26T16:08:38.024696+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:04:33.173880+00:00",
+     "start_time": "2026-03-26T16:08:37.857050+00:00",
      "status": "completed"
     },
     "tags": []
@@ -809,13 +837,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "4bc95984",
+   "id": "7324fafc",
    "metadata": {
     "papermill": {
-     "duration": 0.006593,
-     "end_time": "2026-03-26T14:04:33.366356+00:00",
+     "duration": 0.005876,
+     "end_time": "2026-03-26T16:08:38.037709+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:04:33.359763+00:00",
+     "start_time": "2026-03-26T16:08:38.031833+00:00",
      "status": "completed"
     },
     "tags": []
@@ -834,18 +862,20 @@
     "\n",
     "The results suggest that while the model is effective at identifying fraud, it produces a high number of false positives. Therefore, threshold tuning is required to balance precision and recall.\n",
     "\n",
-    "Accuracy (0.87) is not a reliable metric in this context due to class imbalance."
+    "Accuracy (0.87) is not a reliable metric in this context due to class imbalance.\n",
+    "\n",
+    "While Logistic Regression is effective at identifying fraud, it lacks precision and struggles with the complexity of fraud patterns. This highlights the limitation of linear models in real-world fraud detection."
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "6e47773d",
+   "id": "bd8d3567",
    "metadata": {
     "papermill": {
-     "duration": 0.005815,
-     "end_time": "2026-03-26T14:04:33.378383+00:00",
+     "duration": 0.005706,
+     "end_time": "2026-03-26T16:08:38.049182+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:04:33.372568+00:00",
+     "start_time": "2026-03-26T16:08:38.043476+00:00",
      "status": "completed"
     },
     "tags": []
@@ -853,25 +883,27 @@
    "source": [
     "---\n",
     "\n",
-    "# Model 2: Random Forest"
+    "# Model 2: Random Forest\n",
+    "\n",
+    "Random Forest is an ensemble learning method that builds multiple decision trees to capture non-linear relationships in the data."
    ]
   },
   {
    "cell_type": "code",
    "execution_count": 11,
-   "id": "dec7e9db",
+   "id": "cb1cfe2e",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T14:04:33.392850Z",
-     "iopub.status.busy": "2026-03-26T14:04:33.392445Z",
-     "iopub.status.idle": "2026-03-26T14:18:54.360277Z",
-     "shell.execute_reply": "2026-03-26T14:18:54.358984Z"
+     "iopub.execute_input": "2026-03-26T16:08:38.063297Z",
+     "iopub.status.busy": "2026-03-26T16:08:38.062476Z",
+     "iopub.status.idle": "2026-03-26T16:20:51.527602Z",
+     "shell.execute_reply": "2026-03-26T16:20:51.526495Z"
     },
     "papermill": {
-     "duration": 860.978511,
-     "end_time": "2026-03-26T14:18:54.362989+00:00",
+     "duration": 733.474987,
+     "end_time": "2026-03-26T16:20:51.529968+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:04:33.384478+00:00",
+     "start_time": "2026-03-26T16:08:38.054981+00:00",
      "status": "completed"
     },
     "tags": []
@@ -888,13 +920,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "2d52b846",
+   "id": "1af20e8a",
    "metadata": {
     "papermill": {
-     "duration": 0.005796,
-     "end_time": "2026-03-26T14:18:54.375376+00:00",
+     "duration": 0.005518,
+     "end_time": "2026-03-26T16:20:51.541813+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:18:54.369580+00:00",
+     "start_time": "2026-03-26T16:20:51.536295+00:00",
      "status": "completed"
     },
     "tags": []
@@ -906,19 +938,19 @@
   {
    "cell_type": "code",
    "execution_count": 12,
-   "id": "659d6e50",
+   "id": "f9a8637a",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T14:18:54.388783Z",
-     "iopub.status.busy": "2026-03-26T14:18:54.388387Z",
-     "iopub.status.idle": "2026-03-26T14:18:54.489700Z",
-     "shell.execute_reply": "2026-03-26T14:18:54.488535Z"
+     "iopub.execute_input": "2026-03-26T16:20:51.555114Z",
+     "iopub.status.busy": "2026-03-26T16:20:51.554520Z",
+     "iopub.status.idle": "2026-03-26T16:20:51.645981Z",
+     "shell.execute_reply": "2026-03-26T16:20:51.645006Z"
     },
     "papermill": {
-     "duration": 0.11128,
-     "end_time": "2026-03-26T14:18:54.492261+00:00",
+     "duration": 0.100765,
+     "end_time": "2026-03-26T16:20:51.648213+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:18:54.380981+00:00",
+     "start_time": "2026-03-26T16:20:51.547448+00:00",
      "status": "completed"
     },
     "tags": []
@@ -949,13 +981,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "06185da5",
+   "id": "a8ca65cd",
    "metadata": {
     "papermill": {
-     "duration": 0.00585,
-     "end_time": "2026-03-26T14:18:54.504214+00:00",
+     "duration": 0.005839,
+     "end_time": "2026-03-26T16:20:51.660225+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:18:54.498364+00:00",
+     "start_time": "2026-03-26T16:20:51.654386+00:00",
      "status": "completed"
     },
     "tags": []
@@ -979,13 +1011,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "f70581a0",
+   "id": "8591a5f5",
    "metadata": {
     "papermill": {
-     "duration": 0.005801,
-     "end_time": "2026-03-26T14:18:54.515941+00:00",
+     "duration": 0.005724,
+     "end_time": "2026-03-26T16:20:51.671812+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:18:54.510140+00:00",
+     "start_time": "2026-03-26T16:20:51.666088+00:00",
      "status": "completed"
     },
     "tags": []
@@ -995,25 +1027,25 @@
     "\n",
     "# Model 3: XGBoost\n",
     "\n",
-    "XGBoost is a powerful gradient boosting algorithm known for high performance."
+    "XGBoost is a powerful gradient boosting algorithm known for high performance and efficiency."
    ]
   },
   {
    "cell_type": "code",
    "execution_count": 13,
-   "id": "1e36bd9f",
+   "id": "4d4d94a0",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T14:18:54.531120Z",
-     "iopub.status.busy": "2026-03-26T14:18:54.529986Z",
-     "iopub.status.idle": "2026-03-26T14:19:04.791999Z",
-     "shell.execute_reply": "2026-03-26T14:19:04.791157Z"
+     "iopub.execute_input": "2026-03-26T16:20:51.687293Z",
+     "iopub.status.busy": "2026-03-26T16:20:51.686799Z",
+     "iopub.status.idle": "2026-03-26T16:21:00.277106Z",
+     "shell.execute_reply": "2026-03-26T16:21:00.276431Z"
     },
     "papermill": {
-     "duration": 10.272982,
-     "end_time": "2026-03-26T14:19:04.794784+00:00",
+     "duration": 8.60029,
+     "end_time": "2026-03-26T16:21:00.279597+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:18:54.521802+00:00",
+     "start_time": "2026-03-26T16:20:51.679307+00:00",
      "status": "completed"
     },
     "tags": []
@@ -1036,13 +1068,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "6c90273c",
+   "id": "2637a857",
    "metadata": {
     "papermill": {
-     "duration": 0.006521,
-     "end_time": "2026-03-26T14:19:04.808959+00:00",
+     "duration": 0.006988,
+     "end_time": "2026-03-26T16:21:00.294055+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:19:04.802438+00:00",
+     "start_time": "2026-03-26T16:21:00.287067+00:00",
      "status": "completed"
     },
     "tags": []
@@ -1054,19 +1086,19 @@
   {
    "cell_type": "code",
    "execution_count": 14,
-   "id": "5b601b5c",
+   "id": "4d956508",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T14:19:04.823184Z",
-     "iopub.status.busy": "2026-03-26T14:19:04.822346Z",
-     "iopub.status.idle": "2026-03-26T14:19:04.953888Z",
-     "shell.execute_reply": "2026-03-26T14:19:04.952615Z"
+     "iopub.execute_input": "2026-03-26T16:21:00.307193Z",
+     "iopub.status.busy": "2026-03-26T16:21:00.306886Z",
+     "iopub.status.idle": "2026-03-26T16:21:00.428742Z",
+     "shell.execute_reply": "2026-03-26T16:21:00.427296Z"
     },
     "papermill": {
-     "duration": 0.141428,
-     "end_time": "2026-03-26T14:19:04.956203+00:00",
+     "duration": 0.131025,
+     "end_time": "2026-03-26T16:21:00.430881+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:19:04.814775+00:00",
+     "start_time": "2026-03-26T16:21:00.299856+00:00",
      "status": "completed"
     },
     "tags": []
@@ -1097,13 +1129,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "e47ea849",
+   "id": "4d9ff437",
    "metadata": {
     "papermill": {
-     "duration": 0.005506,
-     "end_time": "2026-03-26T14:19:04.967715+00:00",
+     "duration": 0.005805,
+     "end_time": "2026-03-26T16:21:00.442814+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:19:04.962209+00:00",
+     "start_time": "2026-03-26T16:21:00.437009+00:00",
      "status": "completed"
     },
     "tags": []
@@ -1117,48 +1149,49 @@
     "\n",
     "- Recall reached 0.89, the highest among all models, meaning most fraud cases were detected\n",
     "- Precision was lower (0.15), indicating a higher number of false positives\n",
-    "- F1-score improved significantly over Logistic Regression but remained lower than Random Forest\n",
+    "- F1-score improved significantly over Logistic Regression but remained lower than Random Forest, reflecting the difficulty of fraud classification.\n",
     "\n",
-    "The model prioritizes detecting fraud over minimizing false alarms, making it suitable for high-risk applications.\n",
+    "XGBoost is the most effective model for fraud detection in this study. The model prioritizes detecting fraud over minimizing false alarms, making it suitable for high-risk applications. It prioritizes capturing fraudulent transactions, which is critical in financial systems where missing fraud is costly. However, the model still produces false positives, highlighting the trade-off between precision and recall.\n",
     "\n",
     "Given its strong ranking ability, threshold tuning is recommended to improve precision while maintaining high recall."
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "c2c93831",
+   "id": "23cb9847",
    "metadata": {
     "papermill": {
-     "duration": 0.005303,
-     "end_time": "2026-03-26T14:19:04.978555+00:00",
+     "duration": 0.005727,
+     "end_time": "2026-03-26T16:21:00.454560+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:19:04.973252+00:00",
+     "start_time": "2026-03-26T16:21:00.448833+00:00",
      "status": "completed"
     },
     "tags": []
    },
    "source": [
     "---\n",
+    "# ROC Curve Comparison\n",
     "\n",
-    "# ROC Curve Comparison"
+    "The ROC curve illustrates the trade-off between true positive rate and false positive rate."
    ]
   },
   {
    "cell_type": "code",
    "execution_count": 15,
-   "id": "851bae53",
+   "id": "6ff5cf3f",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T14:19:04.992114Z",
-     "iopub.status.busy": "2026-03-26T14:19:04.991096Z",
-     "iopub.status.idle": "2026-03-26T14:19:05.419776Z",
-     "shell.execute_reply": "2026-03-26T14:19:05.418899Z"
+     "iopub.execute_input": "2026-03-26T16:21:00.467905Z",
+     "iopub.status.busy": "2026-03-26T16:21:00.467517Z",
+     "iopub.status.idle": "2026-03-26T16:21:00.881929Z",
+     "shell.execute_reply": "2026-03-26T16:21:00.880835Z"
     },
     "papermill": {
-     "duration": 0.438887,
-     "end_time": "2026-03-26T14:19:05.422824+00:00",
+     "duration": 0.423681,
+     "end_time": "2026-03-26T16:21:00.884074+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:19:04.983937+00:00",
+     "start_time": "2026-03-26T16:21:00.460393+00:00",
      "status": "completed"
     },
     "tags": []
@@ -1198,13 +1231,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "1f2b4a8c",
+   "id": "cf942398",
    "metadata": {
     "papermill": {
-     "duration": 0.006263,
-     "end_time": "2026-03-26T14:19:05.435818+00:00",
+     "duration": 0.006359,
+     "end_time": "2026-03-26T16:21:00.897160+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:19:05.429555+00:00",
+     "start_time": "2026-03-26T16:21:00.890801+00:00",
      "status": "completed"
     },
     "tags": []
@@ -1227,38 +1260,44 @@
   },
   {
    "cell_type": "markdown",
-   "id": "2b6d4d2f",
+   "id": "13b2932d",
    "metadata": {
     "papermill": {
-     "duration": 0.006131,
-     "end_time": "2026-03-26T14:19:05.448139+00:00",
+     "duration": 0.007025,
+     "end_time": "2026-03-26T16:21:00.910810+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:19:05.442008+00:00",
+     "start_time": "2026-03-26T16:21:00.903785+00:00",
      "status": "completed"
     },
     "tags": []
    },
    "source": [
     "---\n",
-    "# Confusion Matrix (XGBoost)"
+    "# Confusion Matrix (XGBoost)\n",
+    "\n",
+    "The confusion matrix provides a detailed breakdown of model predictions:\n",
+    "\n",
+    "- True Positives: Fraud correctly detected\n",
+    "- False Positives: Legitimate transactions flagged as fraud\n",
+    "- False Negatives: Missed fraud cases"
    ]
   },
   {
    "cell_type": "code",
    "execution_count": 16,
-   "id": "a421946f",
+   "id": "ca07b27e",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T14:19:05.463291Z",
-     "iopub.status.busy": "2026-03-26T14:19:05.462704Z",
-     "iopub.status.idle": "2026-03-26T14:19:05.627932Z",
-     "shell.execute_reply": "2026-03-26T14:19:05.626872Z"
+     "iopub.execute_input": "2026-03-26T16:21:00.926008Z",
+     "iopub.status.busy": "2026-03-26T16:21:00.925210Z",
+     "iopub.status.idle": "2026-03-26T16:21:01.088545Z",
+     "shell.execute_reply": "2026-03-26T16:21:01.087549Z"
     },
     "papermill": {
-     "duration": 0.175546,
-     "end_time": "2026-03-26T14:19:05.629891+00:00",
+     "duration": 0.173387,
+     "end_time": "2026-03-26T16:21:01.090609+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:19:05.454345+00:00",
+     "start_time": "2026-03-26T16:21:00.917222+00:00",
      "status": "completed"
     },
     "tags": []
@@ -1289,13 +1328,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "f3301099",
+   "id": "9158555e",
    "metadata": {
     "papermill": {
-     "duration": 0.0066,
-     "end_time": "2026-03-26T14:19:05.643596+00:00",
+     "duration": 0.006823,
+     "end_time": "2026-03-26T16:21:01.104728+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:19:05.636996+00:00",
+     "start_time": "2026-03-26T16:21:01.097905+00:00",
      "status": "completed"
     },
     "tags": []
@@ -1319,38 +1358,40 @@
   },
   {
    "cell_type": "markdown",
-   "id": "4c942009",
+   "id": "5d6c3ba2",
    "metadata": {
     "papermill": {
-     "duration": 0.006781,
-     "end_time": "2026-03-26T14:19:05.657161+00:00",
+     "duration": 0.006851,
+     "end_time": "2026-03-26T16:21:01.118348+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:19:05.650380+00:00",
+     "start_time": "2026-03-26T16:21:01.111497+00:00",
      "status": "completed"
     },
     "tags": []
    },
    "source": [
     "---\n",
-    "# Feature Importance (XGBoost)"
+    "# Feature Importance (XGBoost)\n",
+    "\n",
+    "The XGBoost model identifies the most important features driving fraud detection."
    ]
   },
   {
    "cell_type": "code",
    "execution_count": 17,
-   "id": "0166c2b0",
+   "id": "953bb14a",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T14:19:05.672897Z",
-     "iopub.status.busy": "2026-03-26T14:19:05.672112Z",
-     "iopub.status.idle": "2026-03-26T14:19:05.887146Z",
-     "shell.execute_reply": "2026-03-26T14:19:05.885955Z"
+     "iopub.execute_input": "2026-03-26T16:21:01.133906Z",
+     "iopub.status.busy": "2026-03-26T16:21:01.133548Z",
+     "iopub.status.idle": "2026-03-26T16:21:01.338452Z",
+     "shell.execute_reply": "2026-03-26T16:21:01.337479Z"
     },
     "papermill": {
-     "duration": 0.225398,
-     "end_time": "2026-03-26T14:19:05.889257+00:00",
+     "duration": 0.215185,
+     "end_time": "2026-03-26T16:21:01.340447+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:19:05.663859+00:00",
+     "start_time": "2026-03-26T16:21:01.125262+00:00",
      "status": "completed"
     },
     "tags": []
@@ -1378,13 +1419,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "0cc84599",
+   "id": "7758c66e",
    "metadata": {
     "papermill": {
-     "duration": 0.007106,
-     "end_time": "2026-03-26T14:19:05.903761+00:00",
+     "duration": 0.007108,
+     "end_time": "2026-03-26T16:21:01.354904+00:00",
      "exception": false,
-     "start_time": "2026-03-26T14:19:05.896655+00:00",
+     "start_time": "2026-03-26T16:21:01.347796+00:00",
      "status": "completed"
     },
     "tags": []
@@ -1401,6 +1442,65 @@
     "In contrast, features such as transaction hour, transaction month, and customer age have relatively low importance, indicating that they provide limited additional predictive value.\n",
     "\n",
     "These findings align closely with earlier exploratory data analysis, reinforcing the conclusion that fraud is primarily driven by transaction characteristics rather than demographic factors."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ef848b7e",
+   "metadata": {
+    "papermill": {
+     "duration": 0.007142,
+     "end_time": "2026-03-26T16:21:01.369431+00:00",
+     "exception": false,
+     "start_time": "2026-03-26T16:21:01.362289+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "---\n",
+    "# Consistency with Exploratory Data Analysis\n",
+    "\n",
+    "The modeling results strongly validate the findings from Project 1:\n",
+    "\n",
+    "- High transaction amounts are strongly associated with fraud.\n",
+    "- Fraud is more likely to occur during night-time hours.\n",
+    "- Demographic features such as age have limited predictive power.\n",
+    "\n",
+    "This consistency demonstrates that the patterns identified during EDA are meaningful and effectively captured by machine learning models."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1f4619cd",
+   "metadata": {
+    "papermill": {
+     "duration": 0.006958,
+     "end_time": "2026-03-26T16:21:01.383517+00:00",
+     "exception": false,
+     "start_time": "2026-03-26T16:21:01.376559+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "# Conclusion\n",
+    "\n",
+    "This project demonstrates that fraud detection is primarily driven by transaction-level behavioral patterns, particularly transaction amount and time of occurrence.\n",
+    "\n",
+    "Among the models evaluated:\n",
+    "- Logistic Regression provides a useful baseline but lacks precision.\n",
+    "- Random Forest improves performance by capturing non-linear relationships.\n",
+    "- XGBoost achieves the best overall performance, with the highest ROC-AUC and recall.\n",
+    "\n",
+    "Despite strong performance, precision remains a challenge due to class imbalance and overlapping patterns between fraud and legitimate transactions.\n",
+    "\n",
+    "Overall, the results highlight the importance of:\n",
+    "- Feature engineering\n",
+    "- Handling class imbalance\n",
+    "- Using advanced ensemble models\n",
+    "\n",
+    "This project establishes a strong foundation for further improvements, including model optimization and explainability in subsequent work."
    ]
   }
  ],
@@ -1440,14 +1540,14 @@
   },
   "papermill": {
    "default_parameters": {},
-   "duration": 902.615988,
-   "end_time": "2026-03-26T14:19:07.237666+00:00",
+   "duration": 773.511485,
+   "end_time": "2026-03-26T16:21:02.414421+00:00",
    "environment_variables": {},
    "exception": null,
    "input_path": "__notebook__.ipynb",
    "output_path": "__notebook__.ipynb",
    "parameters": {},
-   "start_time": "2026-03-26T14:04:04.621678+00:00",
+   "start_time": "2026-03-26T16:08:08.902936+00:00",
    "version": "2.7.0"
   }
  },
